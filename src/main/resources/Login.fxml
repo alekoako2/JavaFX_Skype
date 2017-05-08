@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-radius: 10; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.c4u.comm_emp.authorization.login.LoginViewImpl">
+   <children>
+      <Pane fx:id="signInPane" layoutX="10.0" layoutY="10.0" StackPane.alignment="CENTER">
+         <children>
+            <Pane layoutY="25.0" prefHeight="262.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: radial-gradient(radius 180%, #00bdee, derive(#00bdee, -5%), derive(#00bdee, 30%)); -fx-border-width: 0 1 1 1;">
+               <children>
+                  <TextField id="username" fx:id="emailfield" layoutX="25.0" layoutY="80.0" prefHeight="35.0" prefWidth="350.0" promptText="Email" styleClass="textField">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="passwordField" layoutX="25.0" layoutY="80.0" prefHeight="36.0" prefWidth="350.0" promptText="Password" styleClass="textField" visible="false">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </PasswordField>
+                  <Label fx:id="signIn" alignment="CENTER" ellipsisString="email" layoutX="340.0" layoutY="89.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: white; -fx-background-radius: 35; -fx-cursor: hand; -fx-border-radius: 40; -fx-border-color: #00bdee; -fx-border-width: 2;" styleClass="opacity" text="⇥" textFill="#00bdee">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="warningLabel" alignment="CENTER" contentDisplay="CENTER" layoutY="130.0" prefWidth="400.0" text="Incorrect email" textAlignment="CENTER" textFill="#dd4b39e5" visible="false">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="22.0" layoutY="186.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="350.0" styleClass="button3D" text="Sign up" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Button>
+                  <Hyperlink alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="156.0" prefWidth="150.0" text="Forgot password?" />
+               </children>
+            </Pane>
+            <Pane fx:id="headerPane" prefWidth="400.0" style="-fx-cursor: hand;">
+               <children>
+                  <Pane layoutX="-5.0" prefHeight="70.0" prefWidth="410.0" style="-fx-background-color: #00bdee; -fx-background-radius: 0;">
+                     <effect>
+                        <DropShadow color="#02030367" height="10.0" offsetY="5.0" radius="4.5" width="10.0" />
+                     </effect>
+                     <children>
+                        <Label alignment="CENTER" layoutX="75.0" layoutY="8.0" prefHeight="45.0" prefWidth="260.0" text="CommEmp" textAlignment="CENTER">
+                           <effect>
+                              <DropShadow height="10.0" offsetY="3.0" radius="4.5" width="10.0" />
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="43.0" />
+                           </font>
+                           <textFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="WHITE" />
+                                    <Stop color="#e1f9ff" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
+                        </Label>
+                     </children></Pane>
+               </children>
+            </Pane>
+         </children>
+         <StackPane.margin>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+         </StackPane.margin>
+         <effect>
+            <DropShadow height="80.0" radius="39.5" width="80.0" />
+         </effect>
+      </Pane>
+   </children>
+   <padding>
+      <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+   </padding>
+</StackPane>

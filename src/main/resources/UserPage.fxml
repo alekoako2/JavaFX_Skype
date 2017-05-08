@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane style="-fx-background-radius: 10; -fx-border-radius: 10;" styleClass="stackPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.c4u.comm_emp.userPage.UserPageViewImpl">
+   <effect>
+      <DropShadow height="80.0" radius="39.5" width="80.0" />
+   </effect>
+   <children>
+      <SplitPane style="-fx-background-color: null;">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <FlowPane fx:id="userPageFlowPane" style="-fx-background-color: white; -fx-border-color: #00bdee; -fx-border-width: 1;">
+                     <children>
+                        <FlowPane prefWidth="400.0" style="-fx-cursor: hand;">
+                           <children>
+                              <Pane fx:id="headerPane" prefWidth="400.0">
+                                 <children>
+                                    <Pane layoutX="10.0" layoutY="15.0">
+                                       <children>
+                                          <TextField fx:id="activityMessageTextField" disable="true" layoutX="91.0" layoutY="29.0" prefHeight="29.0" prefWidth="148.0" promptText="Activity message" style="-fx-background-color: null; -fx-prompt-text-fill: gray; -fx-text-fill: gray; -fx-cursor: hand;">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label fx:id="userNameLabel" layoutX="100.0" layoutY="14.0" text="Firstname Lastname" textFill="#404040">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Circle fx:id="userImageCircle" fill="WHITE" layoutX="48.0" layoutY="38.0" radius="37.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                                          <Pane layoutX="65.0" layoutY="50.0" prefHeight="21.0" prefWidth="20.0">
+                                             <children>
+                                                <Circle fill="WHITE" layoutX="10.0" layoutY="10.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                                                <Label fx:id="userStatusLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="3.0" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: green; -fx-background-radius: 100;" text="✔" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </FlowPane>
+                        <FlowPane hgap="5.0" prefWidth="400.0" style="-fx-border-width: 0 0 1 0; -fx-border-color: lightgray;" vgap="15.0">
+                           <children>
+                              <TextField fx:id="userSearchTextField" prefHeight="37.0" prefWidth="360.0" promptText="Search Employees" styleClass="textField">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <ToggleButton fx:id="userSettingsToggleButton" depthTest="DISABLE" mnemonicParsing="false" prefHeight="47.0" prefWidth="108.0" styleClass="button3D" text="Settings" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="accountsSettings" />
+                                 </toggleGroup>
+                              </ToggleButton>
+                              <ToggleButton fx:id="userAccountsToggleButton" mnemonicParsing="false" prefHeight="47.0" prefWidth="108.0" styleClass="button3D" text="Accounts" textFill="WHITE" toggleGroup="$accountsSettings">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </ToggleButton>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                        </FlowPane>
+                        <FlowPane>
+                           <children>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="395.0" prefWidth="400.0" style="-fx-background: white; -fx-background-color: white;" styleClass="scroll-bar">
+                                 <content>
+                                    <FlowPane fx:id="employeesFlowPane" prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefWidth="380.0" text="Favorites" translateX="15.0">
+                                             <font>
+                                                <Font name="System Italic" size="15.0" />
+                                             </font>
+                                             <textFill>
+                                                <RadialGradient centerX="0.4719101123595506" centerY="0.5" radius="0.5">
+                                                   <stops>
+                                                      <Stop color="WHITE" />
+                                                      <Stop color="BLACK" offset="0.007407407407407408" />
+                                                      <Stop color="#4a4a4a" offset="1.0" />
+                                                   </stops>
+                                                </RadialGradient>
+                                             </textFill>
+                                          </Label>
+                                          <Label prefWidth="380.0" text="Employees" translateX="15.0">
+                                             <font>
+                                                <Font name="System Italic" size="15.0" />
+                                             </font>
+                                             <textFill>
+                                                <RadialGradient centerX="0.4719101123595506" centerY="0.5" radius="0.5">
+                                                   <stops>
+                                                      <Stop color="WHITE" />
+                                                      <Stop color="BLACK" offset="0.007407407407407408" />
+                                                      <Stop color="#4a4a4a" offset="1.0" />
+                                                   </stops>
+                                                </RadialGradient>
+                                             </textFill>
+                                          </Label>
+                                       </children>
+                                    </FlowPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </FlowPane>
+               </children>
+            </AnchorPane>
+        </items>
+         <StackPane.margin>
+            <Insets bottom="35.0" left="35.0" right="35.0" top="35.0" />
+         </StackPane.margin>
+      </SplitPane>
+   </children>
+</StackPane>

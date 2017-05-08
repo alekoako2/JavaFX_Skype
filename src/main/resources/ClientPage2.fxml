@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+
+<BorderPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.c4u.comm_emp.clientPage.appointment.AppointmentView">
+    <center>
+        <Pane id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: white;" styleClass="main_pane" BorderPane.alignment="CENTER">
+            <children>
+                <Pane fx:id="datePickerSkinPane" layoutX="300.0" layoutY="40.0" prefHeight="700.0" prefWidth="1610.0" />
+                <Pane fx:id="datePickerBackgroundPanePane" layoutX="300.0" layoutY="40.0"  prefHeight="725.0" prefWidth="1610.0" style="-fx-cursor: hand;" styleClass="backgroundPane" visible="false" />
+                <Pane fx:id="datePickerInnerPane" layoutX="905.0" layoutY="150.0" prefHeight="475.0" prefWidth="400.0" style="-fx-background-color: white;" visible="false">
+                    <children>
+                        <Pane prefHeight="80.0" prefWidth="400.0" style="-fx-background-color: #0096c9; -fx-cursor: hand;">
+                            <children>
+                                <Button fx:id="exitButton" alignment="CENTER" layoutX="334.0" layoutY="18.0" mnemonicParsing="false" style="-fx-cursor: hand; -fx-background-color: #0096c9;" text="X" textAlignment="CENTER" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Button>
+                                <Label layoutX="25.0" layoutY="21.0" text="Appointment" textFill="WHITE">
+                                    <font>
+                                        <Font size="32.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="appointmentDateLabel" layoutX="27.0" layoutY="10.0" text="22-12-2016" textFill="WHITE" />
+                            </children>
+                        </Pane>
+                        <Pane layoutY="80.0" prefHeight="6.0" prefWidth="400.0" style="-fx-background-color: #189bc7;">
+                            <children>
+                                <ToggleButton fx:id="plannerToggle" layoutX="25.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="103.0" style="-fx-cursor: hand;" text="Planner">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="appointmentMenu" />
+                                    </toggleGroup>
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                    <styleClass>
+                                        <String fx:value="toggleBtnActive" />
+                                        <String fx:value="toggleBtn" />
+                                    </styleClass>
+                                </ToggleButton>
+                                <ToggleButton fx:id="massageToggle" layoutX="129.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="103.0" style="-fx-cursor: hand;" styleClass="toggleBtn" text="Massage" toggleGroup="$AppointmentMenu">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </ToggleButton>
+                                <ToggleButton fx:id="menuToggle" layoutX="233.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="103.0" style="-fx-cursor: hand;" styleClass="toggleBtn" text="Menu" toggleGroup="$AppointmentMenu">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </ToggleButton>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="plannerPane" layoutY="137.0" prefHeight="270.0" prefWidth="400.0">
+                            <children>
+                                <Pane layoutX="43.0" layoutY="43.0">
+                                    <children>
+                                        <Label layoutY="95.0" text="Duration" textFill="#17526e">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="24.5" layoutY="46.0" text="Time" textFill="#17526e">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="19.5" layoutY="141.0" text="Notes" textFill="#17526e">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="27.5" text="Title" textFill="#17526e">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </Pane>
+                                <Pane fx:id="plannerInnerPane" layoutX="35.5" layoutY="24.0" />
+                            </children>
+                        </Pane>
+                        <Pane fx:id="massagePane" layoutY="137.0" prefHeight="270.0" prefWidth="400.0" visible="false">
+                            <children>
+                                <Pane layoutX="43.0" layoutY="43.0">
+                                    <children>
+                                        <Label layoutX="24.5" layoutY="46.0" text="Time" textFill="#17526e">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="1.5" text="Provider" textFill="#17526e">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="19.5" layoutY="141.0" text="Notes" textFill="#17526e">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutY="95.0" text="Duration" textFill="#17526e">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </Pane>
+                                <Pane fx:id="massageInnerPane" layoutX="35.5" layoutY="24.0" />
+                            </children>
+                        </Pane>
+                        <Pane fx:id="menuPane" layoutY="137.0" prefHeight="270.0" prefWidth="400.0" visible="false">
+                            <children>
+                                <Pane layoutX="62.0" layoutY="77.0">
+                                    <children>
+                                        <Label layoutX="156.5" layoutY="128.0" prefHeight="28.0" prefWidth="7.0" text="€" textFill="#0096c9">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="9.5" layoutY="135.0" text="Total" textFill="#17526e" />
+                                        <Label text="Foods" textFill="#17526e">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </Pane>
+                                <Pane fx:id="menuInnerPane" layoutX="128.0" layoutY="24.0" prefHeight="180.0" prefWidth="235.0" />
+                            </children>
+                        </Pane>
+                        <Line endX="400.0" startX="50.0" stroke="#189bc7" translateY="385.0">
+                            <effect>
+                                <DropShadow color="#00000071" />
+                            </effect>
+                        </Line>
+                        <Button fx:id="appointmentFinishButton" layoutX="247.0" layoutY="407.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="116.0" style="-fx-background-color: #0096c9; -fx-cursor: hand;" styleClass="button3d" text="Finish" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="22.0" />
+                            </font>
+                            <effect>
+                                <DropShadow color="#1d669a" height="1.0" offsetY="6.0" radius="0.0" width="0.0" />
+                            </effect>
+                        </Button>
+                        <Button layoutX="49.0" layoutY="407.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="116.0" style="-fx-background-color: #c22424; -fx-cursor: hand;" styleClass="button3d" text="Cancel" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="22.0" />
+                            </font>
+                            <effect>
+                                <DropShadow color="#8a2828" height="1.0" offsetY="5.0" radius="0.0" width="0.0" />
+                            </effect>
+                        </Button>
+                    </children>
+                    <effect>
+                        <DropShadow color="#000000ad" />
+                    </effect>
+                </Pane>
+                <Pane layoutX="10.0" layoutY="40.0" prefHeight="1000.0" prefWidth="280.0" style="-fx-background-color: #0096c9; -fx-background-radius: 10;">
+                    <children>
+                        <Pane layoutX="1.0" layoutY="5.0" prefHeight="985.0" prefWidth="278.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+                            <children>
+                                <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="5.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                                    <image>
+                                        <Image url="@../image/userPicture.png" />
+                                    </image>
+                                </ImageView>
+                                <Label layoutX="64.0" layoutY="12.0" style="-fx-cursor: hand;" text="Name Surname">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="64.0" layoutY="34.0" style="-fx-cursor: hand;" text="Activity message" textFill="#00000096" />
+                                <TextField layoutX="14.0" layoutY="75.0" prefHeight="33.0" prefWidth="232.0" promptText="Search people" style="-fx-padding: 0 0 0 50; -fx-background-color: white; -fx-border-width: 0 0 1 0; -fx-border-color: #189bc7;" styleClass="searchPeopleInput" />
+                                <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="52.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                                    <image>
+                                        <Image url="@../image/settings.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="20.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                                    <image>
+                                        <Image url="@../image/contacts.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="220.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                                    <image>
+                                        <Image url="@../image/add_button.png" />
+                                    </image>
+                                </ImageView>
+                                <Label layoutX="14.0" layoutY="149.0" text="Contacts" />
+                                <Pane layoutX="14.0" layoutY="170.0" prefHeight="50.0" prefWidth="232.0" style="-fx-background-color: #0096c9; -fx-cursor: hand; -fx-background-radius: 5;">
+                                    <children>
+                                        <Pane prefHeight="48.0" prefWidth="43.0" style="-fx-background-color: white;">
+                                            <children>
+                                                <ImageView fitHeight="42.0" fitWidth="42.0" layoutY="-0.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../image/userPicture.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </children>
+                                        </Pane>
+                                        <Label layoutX="50.0" layoutY="7.0" text="Name Surname" textFill="WHITE">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="50.0" layoutY="29.0" text="Activity message" textFill="#e1dfdf" />
+                                    </children>
+                                    <effect>
+                                        <DropShadow color="#000000a0" height="7.34" offsetY="4.0" radius="3.55" width="8.86" />
+                                    </effect>
+                                </Pane>
+                                <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="53.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                                    <image>
+                                        <Image url="@../image/active.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </Pane>
+                    </children>
+                    <effect>
+                        <DropShadow color="#00000087" />
+                    </effect>
+                </Pane>
+            <FlowPane fx:id="flowPane" layoutX="300.0" layoutY="770.0" prefHeight="270.0" prefWidth="1610.0" />
+            <FlowPane prefHeight="30.0" prefWidth="1920.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Sign out" translateX="3.0" translateY="3.0" />
+               </children>
+            </FlowPane>
+            </children>
+        </Pane>
+    </center>
+</BorderPane>
